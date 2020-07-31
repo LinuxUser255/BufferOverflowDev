@@ -8,7 +8,7 @@ try:
    server = str(sys.argv[1])
    port = int(sys.argv[2])
 except IndexError:
-   print "[+] Usage example: python %s 192.168.132.5 110" % sys.argv[0]
+   print "[+] Usage example: python %s 192.168.1.10" % sys.argv[0]
    sys.exit()
 
 s = so.socket(so.AF_INET, so.SOCK_STREAM)   
